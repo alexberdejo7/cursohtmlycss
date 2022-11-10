@@ -39,18 +39,18 @@
       }
       .title {
         font-size: var(--lg);
-        margin-bottom: 12px;
-        text-align: center;
-      }
-      .subtitle {
-        color: var(--very-light-pink);
-        font-size: var(--sm);
-        font-weight: 30;
-        margin-top: 0;
         margin-bottom: 32px;
-        text-align: center;
+        text-align: start;
+
       }
+      
+      
       .form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form div {
         display: flex;
         flex-direction: column;
       }
@@ -59,20 +59,18 @@
         font-weight: bold;
         margin-bottom: 4px;
       }
-      .input {
-        background-color: var(--text-input-field);
-        border: none;
-        border-radius: 8px;
-        height: 30px;
-        font-size: var(--md);
-        padding: 6px;
-        margin-bottom: 12px;
+      .value {
+        color: var(--very-light-pink);
+        font-size: var(--md); 
+        margin: 8px 0 32px 0;
       }
-      .primary-button {
-        background-color: var(--hospital-green);
+
+      .second-button {
+        background-color: var(--white);
         border-radius: 8px;
-        border: none;
-        color: var(--white);
+        border: 1px solid var
+        (--hospital-green);
+        color: var(--hospital-green);
         width: 100%;
         cursor: pointer;
         font-size: var(--md);
@@ -83,37 +81,44 @@
         margin-top: 14px;
         margin-bottom: 30px;
       }
-      @media (max-width: 1700px) {
-        .logo {
-          display: block;
+      @media (max-width: 1300px) {
+        .form-container {
+            height: 100%;
+        }
+        .form {
+          display: 100%;
+          justify-content: space-between;
         }
       }</style>
 </head>
 <body>
-  <section class="Main-container">
-    <div class="Cards-container">
+    <div class="login">
+        <div class="form-container" >
+             <h1 class="title"> My account</h1>
+            <form action="/" class="form">
+                <div>
+                    <label for="name"
+                    class="label"> Nombre</label>
+                    <p class="value" > Camila </p>
+
+                    <label for="email"
+                    class="label"> Email</label>
+                    <p class="value" > Camila@gmail.com</p>
 
 
-      <div class="Product-card">
-        <img src="" alt="">
+                    <label for="password"
+                    class="label"> Password</label>
+                    <p class="value"> ******* </p>
+                </div>
+                
 
-        <div>
-          <p>$120,00</p>
-          <p>Bike</p>
+
+                <input type="submit" 
+                value="Create" 
+                class="second-button login-button">
+            </form>
         </div>
-        <figure>
-          <img src="https://cdn1.iconfinder.com/data/icons/ui-colored-1-of-3/100/UI_1__8-512.png" alt="">
-
-        </figure>
-
-      </div>
 
     </div>
-
-
-  </section>
-    
-
-
 </body>
 </html>
